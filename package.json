@@ -1,0 +1,11 @@
+{
+  "name": "twitter-search-firebase-functions",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "ssh://git@github.com/euxn23/twitter-search-firebase-functions.git",
+  "author": "euxn23 <euxn23@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^1.19.1"
+  }
+}
