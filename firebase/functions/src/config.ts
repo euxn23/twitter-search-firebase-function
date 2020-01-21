@@ -7,7 +7,7 @@ export const config: Config = {
   searchParams: [
     {
       query: 'string',
-      locale: 'ja'
+      lang: 'ja'
     }
   ]
 };

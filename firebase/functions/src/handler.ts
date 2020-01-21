@@ -30,15 +30,19 @@ export async function handler() {
       Status[]
     > => {
       const statuses = await statusesPromise;
-      const nextStatuses = await searchTweet(
-        client,
-        searchParam,
-        sinceId
-      ).then(ss =>
-        searchParam.exclude
-          ? ss.filter(s => !(s as any).text.includes(searchParam.exclude))
-          : ss
-      );
+      const nextStatuses = await searchTweet(client, searchParam, sinceId)
+        .then(ss =>
+          searchParam.excludeQuery
+            ? ss.filter(
+                s => !(s as any).text.includes(searchParam.excludeQuery)
+              )
+            : ss
+        )
+        .then(ss =>
+          searchParam.excludeRetweet
+            ? ss.filter(s => !Boolean(s.retweeted_status))
+            : ss
+        );
       return [...statuses, ...nextStatuses];
     }, Promise.resolve([]))
     .then(statuses =>

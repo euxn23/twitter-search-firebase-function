@@ -7,6 +7,7 @@ export type Config = {
 
 export type SearchParam = {
   query: string;
-  locale?: string;
-  exclude?: string;
+  lang?: string;
+  excludeQuery?: string;
+  excludeRetweet?: boolean
 };
