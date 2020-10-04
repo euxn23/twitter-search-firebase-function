@@ -19,7 +19,7 @@
     "@types/twitter": "^1.7.0",
     "firebase-admin": "^8.9.1",
     "firebase-functions": "^3.3.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "twitter": "^1.7.1",
     "twitter-d": "^0.4.0",
     "typescript": "^3.7.5"
